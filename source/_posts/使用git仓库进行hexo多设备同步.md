@@ -58,3 +58,13 @@ git add .
 git commit -m "add new post"
 git push origin hexo
 ```
+
+## 其他
+
+踩坑：在本地错误创建了一个master分支，然后在github上创建了一个hexo分支。
+
+无伤大雅，只是在push的时候，要指定分支。
+
+```bash
+git push origin master:hexo
+```

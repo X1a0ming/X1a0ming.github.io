@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>使用git仓库进行hexo多设备同步</title>
+    <link href="/2024/10/30/%E4%BD%BF%E7%94%A8git%E4%BB%93%E5%BA%93%E8%BF%9B%E8%A1%8Chexo%E5%A4%9A%E8%AE%BE%E5%A4%87%E5%90%8C%E6%AD%A5/"/>
+    <url>/2024/10/30/%E4%BD%BF%E7%94%A8git%E4%BB%93%E5%BA%93%E8%BF%9B%E8%A1%8Chexo%E5%A4%9A%E8%AE%BE%E5%A4%87%E5%90%8C%E6%AD%A5/</url>
+    
+    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>在使用hexo写博客的时候，如果只在一台设备上写博客，那么就没有什么问题。但是如果有多台设备，那么就会出现同步的问题。这时候就可以使用git仓库来解决这个问题。</p><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ol start="0"><li><p>默认已经安装好了hexo，git，nodejs，npm等环境，并且部署在github上。</p></li><li><p>在本地hexo目录下，初始化git仓库。</p></li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git init<br></code></pre></td></tr></table></figure><ol start="2"><li>添加远程仓库。</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git remote add origin https://github.com/your-username/your-repo.git<br></code></pre></td></tr></table></figure><ol start="3"><li>新建一个分支，用来存放hexo的源文件。</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git checkout -b hexo<br></code></pre></td></tr></table></figure><ol start="4"><li>将hexo的源文件放到这个分支上。</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add .<br>git commit -m <span class="hljs-string">&quot;init&quot;</span><br>git push origin hexo<br></code></pre></td></tr></table></figure><ol start="5"><li>在其他设备上，clone这个仓库。</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span><br></code></pre></td></tr></table></figure><ol start="6"><li>切换到hexo分支。</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git checkout hexo<br></code></pre></td></tr></table></figure><ol start="7"><li>在这个分支上，完成hexo部署就可以写博客了。当然，写完之后，要提交到远程仓库。</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add .<br>git commit -m <span class="hljs-string">&quot;add new post&quot;</span><br>git push origin hexo<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>hexo</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>hexo</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>ESP32CAM-0：初步使用</title>
     <link href="/2024/10/30/ESP32CAM-0/"/>
     <url>/2024/10/30/ESP32CAM-0/</url>
